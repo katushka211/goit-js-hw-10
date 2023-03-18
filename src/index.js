@@ -47,11 +47,17 @@ function insertContent(array) {
 }
 
 function createCountryInfo(country) {
-  return `<img src ="${country.flags.svg}" alt = "${
+  return `<div class="info-box"><img src ="${country.flags.svg}" alt = "${
     country.flags.alt
-  }" width = "40" height = "20"><p>${country.name.official}</p><p>${
+  }" width = "70" height = "40"><p class="info-box-title">${
+    country.name.official
+  }</p></div><p class="info-country"><span class="basic-country">Capital:</span>${
     country.capital
-  }</p><p>${country.population}</p> <p>${Object.values(country.languages)}</p>`;
+  }</p><p class="info-country"><span class="basic-country">Population:</span>${
+    country.population
+  }</p><p class="info-country"><span class="basic-country">Languages:</span>${Object.values(
+    country.languages
+  )}</p>`;
 }
 
 function generateContentInfo(items) {

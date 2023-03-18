@@ -30,3 +30,22 @@ body {
   margin: 0 0 0 16px;
   font-size: 20px;
 }
+
+.info-box {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.info-box-title {
+  font-family: serif;
+  font-weight: 800;
+  font-size: 60px;
+  margin: 0;
+}
+
+.basic-country {
+  font-weight: 700;
+  font-style: 30px;
+  margin-right: 5px;
+}
