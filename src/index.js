@@ -12,8 +12,7 @@ input.addEventListener('input', debounce(onInputChange, DEBOUNCE_DELAY));
 
 function onInputChange(event) {
   const searchCountry = event.target.value.trim();
-  countryList.innerHTML = '';
-  countryInfo.innerHTML = '';
+  cleanHtml();
   if (searchCountry !== '') {
     fetchCountries(searchCountry).then(data => {
       if (data.length > 10) {
@@ -67,4 +66,9 @@ function generateContentInfo(items) {
 function insertContentInfo(item) {
   const result = generateContentInfo(item);
   countryInfo.insertAdjacentHTML('beforeend', result);
+}
+
+function cleanHtml() {
+  countryList.innerHTML = '';
+  countryInfo.innerHTML = '';
 }
