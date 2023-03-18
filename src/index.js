@@ -32,8 +32,8 @@ function onInputChange(event) {
 }
 
 function createCountryListItem(item) {
-  return `<li><img src = "${item.flags.svg}" alt ="flag of ${item.name.official}" width = "120" height = "60">
-    <p>${item.name.official}</p>
+  return `<li class="list-item"><img src = "${item.flags.svg}" alt ="flag of ${item.name.official}" width = "30" height = "20">
+    <p class="country-title">${item.name.official}</p>
     </li>`;
 }
 
